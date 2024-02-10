@@ -12,3 +12,12 @@ services:
       dockerfile: src/CustomerService/Pluxee.CustomerService/Dockerfile
     networks:
       - backend
+
+  pluxee.orderservice:
+    container_name: pluxee-orderservice
+    image: ${DOCKER_REGISTRY-}pluxeeorderservice
+    build:
+      context: .
+      dockerfile: src/OrderService/Pluxee.OrderService/Dockerfile
+    networks:
+      - backend
