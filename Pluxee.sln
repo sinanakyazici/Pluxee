@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.CustomerService", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.OrderService", "src\OrderService\Pluxee.OrderService\Pluxee.OrderService.csproj", "{EB7B1F05-0151-439A-B605-33EE409137EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.PaymentService", "src\PaymentService\Pluxee.PaymentService\Pluxee.PaymentService.csproj", "{518087D1-C41C-47C1-9565-994C4A77AC9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{EB7B1F05-0151-439A-B605-33EE409137EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB7B1F05-0151-439A-B605-33EE409137EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB7B1F05-0151-439A-B605-33EE409137EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518087D1-C41C-47C1-9565-994C4A77AC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518087D1-C41C-47C1-9565-994C4A77AC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518087D1-C41C-47C1-9565-994C4A77AC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518087D1-C41C-47C1-9565-994C4A77AC9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{F9800AAB-A314-4942-B9D2-DB13FD3B87B0} = {1EC45FD5-9758-4247-A23E-B5191F2A0012}
 		{29373B07-21EB-46A3-A35E-968E52D347B2} = {F28D04D2-BFDE-4806-A385-6BFBEAC74923}
 		{EB7B1F05-0151-439A-B605-33EE409137EA} = {BF77BEC5-6615-4C2F-B112-1B1E1A04614B}
+		{518087D1-C41C-47C1-9565-994C4A77AC9F} = {F9800AAB-A314-4942-B9D2-DB13FD3B87B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2328888E-7A59-4EEB-8CCE-B7D8A5160494}
