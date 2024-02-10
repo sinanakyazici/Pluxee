@@ -6,7 +6,8 @@
       "serviceActions": {
         "pluxee.customerservice": "StartDebugging",
         "pluxee.orderservice": "StartDebugging",
-        "pluxee.paymentservice": "StartDebugging"
+        "pluxee.paymentservice": "StartDebugging",
+        "pluxee.productservice": "StartDebugging"
       }
     }
   }

@@ -30,3 +30,12 @@ services:
       dockerfile: src/PaymentService/Pluxee.PaymentService/Dockerfile
     networks:
       - backend
+
+  pluxee.productservice:
+    container_name: pluxee-productservice
+    image: ${DOCKER_REGISTRY-}pluxeeproductservice
+    build:
+      context: .
+      dockerfile: src/ProductService/Pluxee.ProductService/Dockerfile
+    networks:
+      - backend

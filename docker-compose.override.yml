@@ -18,3 +18,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "61003:8080"
+
+  pluxee.productservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "61004:8080"
