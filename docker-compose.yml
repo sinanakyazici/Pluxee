@@ -1,0 +1,14 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  pluxee.customerservice:
+    container_name: pluxee-customerservice
+    image: ${DOCKER_REGISTRY-}pluxeecustomerservice
+    build:
+      context: .
+      dockerfile: src/CustomerService/Pluxee.CustomerService/Dockerfile
+    networks:
+      - backend
