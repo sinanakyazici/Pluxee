@@ -21,3 +21,12 @@ services:
       dockerfile: src/OrderService/Pluxee.OrderService/Dockerfile
     networks:
       - backend
+
+  pluxee.paymentservice:
+    container_name: pluxee-paymentservice
+    image: ${DOCKER_REGISTRY-}pluxeepaymentservice
+    build:
+      context: .
+      dockerfile: src/PaymentService/Pluxee.PaymentService/Dockerfile
+    networks:
+      - backend

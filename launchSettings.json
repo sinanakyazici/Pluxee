@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "pluxee.customerservice": "StartDebugging",
-        "pluxee.orderservice": "StartDebugging"
+        "pluxee.orderservice": "StartDebugging",
+        "pluxee.paymentservice": "StartDebugging"
       }
     }
   }

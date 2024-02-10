@@ -13,3 +13,8 @@ services:
     ports:
       - "61002:8080"
 
+  pluxee.paymentservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "61003:8080"
