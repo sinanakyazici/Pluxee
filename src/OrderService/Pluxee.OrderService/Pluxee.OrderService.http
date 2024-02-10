@@ -1,0 +1,6 @@
+@Pluxee.OrderService_HostAddress = http://localhost:61002
+
+GET {{Pluxee.OrderService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
