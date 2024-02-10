@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.Domain", "src\Buildi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{471338A6-45EE-46C9-A8D6-61E37ACF3646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.Domain.Tests", "tests\BuildingBlocks\Pluxee.Domain.Tests\Pluxee.Domain.Tests.csproj", "{4903164B-881C-4C2D-BD41-7C7752C6AE5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.Domain.Tests", "tests\BuildingBlocks\Pluxee.Domain.Tests\Pluxee.Domain.Tests.csproj", "{4903164B-881C-4C2D-BD41-7C7752C6AE5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerService", "CustomerService", "{F28D04D2-BFDE-4806-A385-6BFBEAC74923}"
 EndProject
@@ -23,13 +23,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductService", "ProductSe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentService", "PaymentService", "{F9800AAB-A314-4942-B9D2-DB13FD3B87B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.CustomerService", "src\CustomerService\Pluxee.CustomerService\Pluxee.CustomerService.csproj", "{29373B07-21EB-46A3-A35E-968E52D347B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.CustomerService", "src\CustomerService\Pluxee.CustomerService\Pluxee.CustomerService.csproj", "{29373B07-21EB-46A3-A35E-968E52D347B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.OrderService", "src\OrderService\Pluxee.OrderService\Pluxee.OrderService.csproj", "{EB7B1F05-0151-439A-B605-33EE409137EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.OrderService", "src\OrderService\Pluxee.OrderService\Pluxee.OrderService.csproj", "{EB7B1F05-0151-439A-B605-33EE409137EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.PaymentService", "src\PaymentService\Pluxee.PaymentService\Pluxee.PaymentService.csproj", "{518087D1-C41C-47C1-9565-994C4A77AC9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.PaymentService", "src\PaymentService\Pluxee.PaymentService\Pluxee.PaymentService.csproj", "{518087D1-C41C-47C1-9565-994C4A77AC9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluxee.ProductService", "src\ProductService\Pluxee.ProductService\Pluxee.ProductService.csproj", "{03AE3E54-9C02-4E87-BAAC-1BCE02B94AE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.ProductService", "src\ProductService\Pluxee.ProductService\Pluxee.ProductService.csproj", "{03AE3E54-9C02-4E87-BAAC-1BCE02B94AE1}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FB904A5D-303C-4346-96BF-84B4B2C707D2}"
 EndProject

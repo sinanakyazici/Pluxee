@@ -24,3 +24,19 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "61004:8080"
+
+  pluxee.customerservice.db:
+    ports:
+      - "61101:5432"
+
+  pluxee.orderservice.db:
+    ports:
+      - "61102:5432"
+
+  pluxee.paymentservice.db:
+    ports:
+      - "61103:5432"
+
+  pluxee.productservice.db:
+    ports:
+      - "61104:5432"

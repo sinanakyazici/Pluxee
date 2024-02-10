@@ -39,3 +39,57 @@ services:
       dockerfile: src/ProductService/Pluxee.ProductService/Dockerfile
     networks:
       - backend
+
+  pluxee.customerservice.db:
+    image: postgres:latest
+    container_name: pluxee-customerservice-db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes: 
+      - pluxee-customerservice-db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  pluxee.orderservice.db:
+    image: postgres:latest
+    container_name: pluxee-orderservice-db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes: 
+      - pluxee-orderservice-db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  pluxee.paymentservice.db:
+    image: postgres:latest
+    container_name: pluxee-paymentservice-db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes: 
+      - pluxee-paymentservice-db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  pluxee.productservice.db:
+    image: postgres:latest
+    container_name: pluxee-productservice-db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes: 
+      - pluxee-productservice-db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+volumes:
+  pluxee-customerservice-db-data:
+  pluxee-orderservice-db-data:
+  pluxee-paymentservice-db-data:
+  pluxee-productservice-db-data:
