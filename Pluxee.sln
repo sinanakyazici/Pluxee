@@ -33,6 +33,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.ProductService", "sr
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FB904A5D-303C-4346-96BF-84B4B2C707D2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.Infrastructure.Data", "src\BuildingBlocks\Pluxee.Infrastructure.Data\Pluxee.Infrastructure.Data.csproj", "{06AA5337-DFEF-4052-9B79-CA145B037CEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluxee.Application", "src\BuildingBlocks\Pluxee.Application\Pluxee.Application.csproj", "{637C729D-6A55-495A-9B15-738C2729F15D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{D7316AE0-B571-4F6E-8A54-851873F8F878}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{5435D48C-B746-4038-8B25-7A0745233DEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "customer", "customer", "{3A518EAD-2C2C-452D-883F-B3BE208C85E0}"
+	ProjectSection(SolutionItems) = preProject
+		items\db\customer\customer.sql = items\db\customer\customer.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +80,14 @@ Global
 		{FB904A5D-303C-4346-96BF-84B4B2C707D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB904A5D-303C-4346-96BF-84B4B2C707D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB904A5D-303C-4346-96BF-84B4B2C707D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06AA5337-DFEF-4052-9B79-CA145B037CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06AA5337-DFEF-4052-9B79-CA145B037CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06AA5337-DFEF-4052-9B79-CA145B037CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06AA5337-DFEF-4052-9B79-CA145B037CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637C729D-6A55-495A-9B15-738C2729F15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637C729D-6A55-495A-9B15-738C2729F15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637C729D-6A55-495A-9B15-738C2729F15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637C729D-6A55-495A-9B15-738C2729F15D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +105,10 @@ Global
 		{EB7B1F05-0151-439A-B605-33EE409137EA} = {BF77BEC5-6615-4C2F-B112-1B1E1A04614B}
 		{518087D1-C41C-47C1-9565-994C4A77AC9F} = {F9800AAB-A314-4942-B9D2-DB13FD3B87B0}
 		{03AE3E54-9C02-4E87-BAAC-1BCE02B94AE1} = {3D7A89B2-22C9-4A5E-BD6F-EC75A7648442}
+		{06AA5337-DFEF-4052-9B79-CA145B037CEE} = {DDF05EC5-99CE-4B7C-8297-86BEEDD26987}
+		{637C729D-6A55-495A-9B15-738C2729F15D} = {DDF05EC5-99CE-4B7C-8297-86BEEDD26987}
+		{5435D48C-B746-4038-8B25-7A0745233DEF} = {D7316AE0-B571-4F6E-8A54-851873F8F878}
+		{3A518EAD-2C2C-452D-883F-B3BE208C85E0} = {5435D48C-B746-4038-8B25-7A0745233DEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2328888E-7A59-4EEB-8CCE-B7D8A5160494}

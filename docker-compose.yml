@@ -12,6 +12,8 @@ services:
       dockerfile: src/CustomerService/Pluxee.CustomerService/Dockerfile
     networks:
       - backend
+    depends_on:
+      - pluxee.customerservice.db
 
   pluxee.orderservice:
     container_name: pluxee-orderservice
@@ -21,6 +23,8 @@ services:
       dockerfile: src/OrderService/Pluxee.OrderService/Dockerfile
     networks:
       - backend
+    depends_on:
+      - pluxee.orderservice.db
 
   pluxee.paymentservice:
     container_name: pluxee-paymentservice
@@ -30,6 +34,8 @@ services:
       dockerfile: src/PaymentService/Pluxee.PaymentService/Dockerfile
     networks:
       - backend
+    depends_on:
+      - pluxee.paymentservice.db
 
   pluxee.productservice:
     container_name: pluxee-productservice
@@ -39,6 +45,8 @@ services:
       dockerfile: src/ProductService/Pluxee.ProductService/Dockerfile
     networks:
       - backend
+    depends_on:
+      - pluxee.productservice.db
 
   pluxee.customerservice.db:
     image: postgres:latest
