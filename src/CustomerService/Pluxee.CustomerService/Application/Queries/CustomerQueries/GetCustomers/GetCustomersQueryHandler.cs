@@ -8,6 +8,6 @@ public class GetCustomersQueryHandler(ICustomerQueryRepository customerQueryRepo
 {
     public async Task<IEnumerable<CustomerViewModel>> Handle(GetCustomersQuery request, CancellationToken cancellationToken)
     {
-        return await customerQueryRepository.GetCustomers();
+        return await customerQueryRepository.GetCustomersAsync(cancellationToken);
     }
 }

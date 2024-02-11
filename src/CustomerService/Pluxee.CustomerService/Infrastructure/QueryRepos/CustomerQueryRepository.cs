@@ -7,14 +7,14 @@ namespace Pluxee.CustomerService.Infrastructure.QueryRepos;
 
 public class CustomerQueryRepository(IConfiguration configuration) : DapperRepository(configuration), ICustomerQueryRepository
 {
-    public async Task<IEnumerable<CustomerViewModel>> GetCustomers()
+    public async Task<IEnumerable<CustomerViewModel>> GetCustomersAsync(CancellationToken cancellationToken)
     {
         await using var connection = new NpgsqlConnection(ConnectionString);
-        connection.Open();
+        await connection.OpenAsync(cancellationToken);
         var parameters = new DynamicParameters();
 
         var sql = "select * from customer";
-        var customerViewModels = await connection.QueryAsync<CustomerViewModel>(sql, parameters);
+        var customerViewModels = await connection.QueryAsync<CustomerViewModel>(new CommandDefinition(sql, parameters, cancellationToken: cancellationToken));
         return customerViewModels;
     }
 }
