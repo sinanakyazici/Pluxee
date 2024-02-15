@@ -14,6 +14,7 @@ services:
       - backend
     depends_on:
       - pluxee.customerservice.db
+      - pluxee.rabbitmq
 
   pluxee.orderservice:
     container_name: pluxee-orderservice
@@ -25,6 +26,7 @@ services:
       - backend
     depends_on:
       - pluxee.orderservice.db
+      - pluxee.rabbitmq
 
   pluxee.paymentservice:
     container_name: pluxee-paymentservice
@@ -36,6 +38,7 @@ services:
       - backend
     depends_on:
       - pluxee.paymentservice.db
+      - pluxee.rabbitmq
 
   pluxee.productservice:
     container_name: pluxee-productservice
@@ -47,6 +50,7 @@ services:
       - backend
     depends_on:
       - pluxee.productservice.db
+      - pluxee.rabbitmq
 
   pluxee.customerservice.db:
     image: postgres:latest
@@ -96,8 +100,21 @@ services:
     networks:
       - backend
 
+  pluxee.rabbitmq:
+    image: rabbitmq:3-management
+    container_name: pluxee-rabbitmq
+    hostname: rabbitmq
+    restart: always
+    volumes:
+      - pluxee-rabbitmq-data:/var/lib/rabbitmq/
+      - pluxee-rabbitmq-log:/var/log/rabbitmq
+    networks:
+      - backend
+
 volumes:
   pluxee-customerservice-db-data:
   pluxee-orderservice-db-data:
   pluxee-paymentservice-db-data:
   pluxee-productservice-db-data:
+  pluxee-rabbitmq-data:
+  pluxee-rabbitmq-log:

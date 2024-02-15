@@ -40,3 +40,10 @@ services:
   pluxee.productservice.db:
     ports:
       - "61104:5432"
+  
+  pluxee.rabbitmq:
+    ports:
+      # AMQP protocol port
+      - "61105:5672"
+      # HTTP management UI
+      - "61106:15672"  

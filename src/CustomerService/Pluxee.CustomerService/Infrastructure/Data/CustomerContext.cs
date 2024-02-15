@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pluxee.CustomerService.Infrastructure.EntityTypeConfigurations;
+using Pluxee.CustomerService.Infrastructure.Data.EntityTypeConfigurations;
 using Pluxee.Infrastructure.Data.EfCore;
 
 namespace Pluxee.CustomerService.Infrastructure.Data;

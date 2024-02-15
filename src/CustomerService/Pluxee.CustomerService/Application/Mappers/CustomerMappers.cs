@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Pluxee.CustomerService.Application.Commands.CustomerCommands.CreateCustomer;
+using Pluxee.CustomerService.Application.Commands.CreateCustomer;
 using Pluxee.CustomerService.Domain.Customer;
 
 namespace Pluxee.CustomerService.Application.Mappers;

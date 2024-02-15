@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Pluxee.CustomerService.Application.Commands.CustomerCommands.CreateCustomer;
-using Pluxee.CustomerService.Application.Queries.CustomerQueries.GetCustomers;
+using Pluxee.CustomerService.Application.Commands.CreateCustomer;
+using Pluxee.CustomerService.Application.Queries.GetCustomers;
 using Pluxee.CustomerService.Domain.Customer;
 
 namespace Pluxee.CustomerService.Api;

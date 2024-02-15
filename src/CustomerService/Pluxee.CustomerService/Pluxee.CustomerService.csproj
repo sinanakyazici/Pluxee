@@ -19,6 +19,12 @@
     <ProjectReference Include="..\..\BuildingBlocks\Pluxee.Application\Pluxee.Application.csproj" />
     <ProjectReference Include="..\..\BuildingBlocks\Pluxee.Domain\Pluxee.Domain.csproj" />
     <ProjectReference Include="..\..\BuildingBlocks\Pluxee.Infrastructure.Data\Pluxee.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\Pluxee.Infrastructure.Event\Pluxee.Infrastructure.Event.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\Pluxee.Shared\Pluxee.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Events\DomainEvents\" />
   </ItemGroup>
 
 </Project>
