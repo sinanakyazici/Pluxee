@@ -3,4 +3,4 @@ using Pluxee.OrderService.Domain.Order;
 
 namespace Pluxee.OrderService.Infrastructure.Data.CommandRepos;
 
-public class OrderCommandRepository(BaseDbContext dbContext) : EfRepository<Order>(dbContext), IOrderCommandRepository;
+public class OrderCommandRepository(OrderDbContext orderDbContext) : EfRepository<Order>(orderDbContext), IOrderCommandRepository;

@@ -5,7 +5,6 @@ using Pluxee.Application.Mappers;
 using Pluxee.CustomerService.Application.Events.IntegrationEvents.OrderCreatedStatus;
 using Pluxee.CustomerService.Infrastructure.Data;
 using Pluxee.Infrastructure.Data;
-using Pluxee.Infrastructure.Data.EfCore;
 using Pluxee.Infrastructure.Event;
 using Savorboard.CAP.InMemoryMessageQueue;
 
@@ -22,7 +21,7 @@ builder.Services.AddCap(options =>
 {
     // options.UseInMemoryStorage();
 
-    options.UseEntityFramework<BaseDbContext>();
+    options.UseEntityFramework<CustomerDbContext>();
 
     if (rabbitMqConfig != null)
     {
@@ -58,7 +57,8 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
     containerBuilder.RegisterModule(new AutoMapperModule());
     containerBuilder.RegisterModule(new DataAccessModule());
     containerBuilder.RegisterModule(new CqrsModule());
-    containerBuilder.RegisterModule(new CustomerContextModule());
+    containerBuilder.RegisterModule(new EventModule());
+    containerBuilder.RegisterModule(new CustomerDbContextModule());
 });
 
 var app = builder.Build();

@@ -3,7 +3,6 @@ using Autofac.Extensions.DependencyInjection;
 using Pluxee.Application.Cqrs;
 using Pluxee.Application.Mappers;
 using Pluxee.Infrastructure.Data;
-using Pluxee.Infrastructure.Data.EfCore;
 using Pluxee.Infrastructure.Event;
 using Pluxee.OrderService.Application.Events.IntegrationEvents.CustomerCreated;
 using Pluxee.OrderService.Infrastructure.Data;
@@ -22,7 +21,7 @@ builder.Services.AddCap(options =>
 {
     // options.UseInMemoryStorage();
 
-    options.UseEntityFramework<BaseDbContext>();
+    options.UseEntityFramework<OrderDbContext>();
 
     if (rabbitMqConfig != null)
     {
@@ -58,7 +57,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
     containerBuilder.RegisterModule(new DataAccessModule());
     containerBuilder.RegisterModule(new CqrsModule());
     containerBuilder.RegisterModule(new EventModule());
-    containerBuilder.RegisterModule(new OrderContextModule());
+    containerBuilder.RegisterModule(new OrderDbContextModule());
 });
 
 var app = builder.Build();

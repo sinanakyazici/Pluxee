@@ -12,6 +12,5 @@ public class CreateOrderCommandHandler(IOrderCommandRepository orderCommandRepos
         var order = mapper.Map<Order>(request);
         order.Id = Guid.NewGuid();
         await orderCommandRepository.AddAsync(order, cancellationToken);
-        throw new Exception("test");
     }
 }

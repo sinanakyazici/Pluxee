@@ -3,10 +3,10 @@ using Pluxee.Infrastructure.Data.EfCore;
 
 namespace Pluxee.CustomerService.Infrastructure.Data;
 
-public class CustomerContextModule : Module
+public class CustomerDbContextModule : Module
 {
     protected override void Load(ContainerBuilder builder)
     {
-        builder.RegisterType<CustomerContext>().As<BaseDbContext>().InstancePerLifetimeScope();
+        builder.RegisterType<CustomerDbContext>().AsSelf().As<BaseDbContext>().InstancePerLifetimeScope();
     }
 }

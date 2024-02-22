@@ -4,7 +4,7 @@ using Pluxee.Infrastructure.Data.EfCore;
 
 namespace Pluxee.CustomerService.Infrastructure.Data.CommandRepos;
 
-public class CustomerCommandRepository(BaseDbContext dbContext) : EfRepository<Customer>(dbContext), ICustomerCommandRepository
+public class CustomerCommandRepository(CustomerDbContext customerDbContext) : EfRepository<Customer>(customerDbContext), ICustomerCommandRepository
 {
     public async Task<Customer?> GetCustomer(Guid customerId)
     {

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pluxee.Domain\Pluxee.Domain.csproj" />
+    <ProjectReference Include="..\Pluxee.Infrastructure.Data\Pluxee.Infrastructure.Data.csproj" />
   </ItemGroup>
 
 </Project>
