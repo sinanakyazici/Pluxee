@@ -33,7 +33,29 @@ public abstract class BaseDbContext(IConfiguration configuration, ILoggerFactory
 
         try
         {
+            await base.SaveChangesAsync(cancellationToken);
             await CurrentTransaction!.CommitAsync(cancellationToken);
+        }
+        catch
+        {
+            await RollbackTransactionAsync(cancellationToken);
+            throw;
+        }
+        finally
+        {
+            CurrentTransaction?.Dispose();
+            CurrentTransaction = null;
+        }
+    }
+
+
+    public async Task RollbackTransactionAsync(CancellationToken cancellationToken)
+    {
+        if (!HasActiveTransaction) throw new ArgumentNullException(nameof(CurrentTransaction));
+
+        try
+        {
+            await CurrentTransaction!.RollbackAsync(cancellationToken);
         }
         finally
         {
